@@ -25,7 +25,7 @@ After this your Laravel application should be available at http://localhost:8080
 
 ## Customization
 This sections explains how to customize this docker image to fit your needs. There are a few ways to customize this docker image. This can be done through changing the Dockerfile in this repository and rebuilding the image or extending from the image itself. In all examples below I will be extending the image.
-
+ 
 ## Runing the image with xdebug:
 
 By default xdebug is enabled, to disable it you need to create a `.env` file which should contain the following variables, but remember to change the value based one what you want to achieve:
