@@ -41,7 +41,7 @@ Then run the docker and specify the env file that you have created like this
 docker run -itd --env-file .env -v /path/to/local/laravel:/var/www/html  -p 80:80 thimico/laravel
 ```
 ```
-docker run  -itd  -e PHP_XDEBUG_REMOTE_HOST=127.0.0.1 -e PHP_XDEBUG_REMOTE_PORT=9001 -v /path/to/local/laravel:/var/www/html  -p 80:80 thimico/laravel
+docker run --name orea -itd -p 80:80 -e PHP_XDEBUG_REMOTE_HOST=192.168.1.110 -e PHP_XDEBUG_REMOTE_PORT=9000 -v /Users/thimico/ambiente/orea/laravel_project/orea/:/var/www/html thimico/laravel
 ```
 
 ### Install other PHP extensions
