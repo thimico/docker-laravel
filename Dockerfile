@@ -17,9 +17,12 @@ RUN apk --update add wget \
   autoconf \
   cyrus-sasl-dev \
   libgsasl-dev \
+  libjpeg-turbo-dev libpng-dev freetype-dev \
+  apk add --no-cache --virtual .imagick-build-dependencies autoconf curl g++ gcc imagemagick-dev libtool make tar \
   supervisor
 
-RUN docker-php-ext-install mysqli mbstring pdo pdo_mysql tokenizer xml gd
+RUN docker-php-ext-configure gd --with-freetype-dir=/usr/include/ --with-jpeg-dir=/usr/include/ \
+RUN docker-php-ext-install mysqli gd mbstring pdo pdo_mysql tokenizer xml 
 RUN pecl channel-update pecl.php.net && pecl install memcached && docker-php-ext-enable memcached
 RUN pecl install xdebug && docker-php-ext-enable xdebug 
 
