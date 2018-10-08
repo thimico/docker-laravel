@@ -18,8 +18,7 @@ RUN apk --update add wget \
   cyrus-sasl-dev \
   libgsasl-dev \
   supervisor
-  
-RUN docker-php-ext-configure gd 
+
 RUN docker-php-ext-install mysqli mbstring pdo pdo_mysql tokenizer xml gd
 RUN pecl channel-update pecl.php.net && pecl install memcached && docker-php-ext-enable memcached
 RUN pecl install xdebug && docker-php-ext-enable xdebug 
