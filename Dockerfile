@@ -18,8 +18,6 @@ RUN apk --update add wget \
   cyrus-sasl-dev \
   libgsasl-dev \
   libjpeg-turbo-dev libpng-dev freetype-dev \
-  libfreetype6-dev \
-  libjpeg62-turbo-dev \
   libpng-dev \
   autoconf curl g++ gcc imagemagick-dev libtool make tar \
   supervisor
