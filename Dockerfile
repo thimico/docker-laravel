@@ -18,7 +18,7 @@ RUN apk --update add wget \
   cyrus-sasl-dev \
   libgsasl-dev \
   libjpeg-turbo-dev libpng-dev freetype-dev \
-  apk add --no-cache --virtual .imagick-build-dependencies autoconf curl g++ gcc imagemagick-dev libtool make tar \
+  autoconf curl g++ gcc imagemagick-dev libtool make tar \
   supervisor
 
 RUN docker-php-ext-configure gd --with-freetype-dir=/usr/include/ --with-jpeg-dir=/usr/include/ \
